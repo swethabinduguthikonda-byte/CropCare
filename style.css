@@ -1,0 +1,273 @@
+/* CROPCARE - PROFESSIONAL AGRICULTURE WEBSITE */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f7faf7;
+    color: #24352a;
+    line-height: 1.7;
+}
+
+/* NAVIGATION */
+
+header {
+    background: #ffffff;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+header h2 {
+    color: #21834a;
+    font-size: 27px;
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #334b39;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #21834a;
+}
+
+/* HOME SECTION */
+
+.hero {
+    min-height: 520px;
+    padding: 110px 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background: linear-gradient(110deg, #e5f5e8, #f4faf3);
+}
+
+.hero h1 {
+    font-size: 48px;
+    max-width: 650px;
+    line-height: 1.2;
+    color: #174d2b;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 600px;
+    font-size: 18px;
+    color: #53685a;
+    margin-bottom: 30px;
+}
+
+.hero-button {
+    display: inline-block;
+    background: #21834a;
+    color: white;
+    padding: 14px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    background: #145c31;
+    transform: translateY(-2px);
+}
+
+/* COMMON SECTIONS */
+
+.about,
+.detection,
+.contact {
+    padding: 75px 10%;
+    text-align: center;
+}
+
+.about h2,
+.detection h2,
+.contact h2 {
+    font-size: 32px;
+    color: #174d2b;
+    margin-bottom: 18px;
+}
+
+.about p,
+.detection p,
+.contact p {
+    max-width: 750px;
+    margin: 0 auto 18px;
+    color: #617166;
+    font-size: 16px;
+}
+
+/* DETECTION SECTION */
+
+.detection {
+    background: #edf6ef;
+}
+
+#leafImage {
+    display: block;
+    max-width: 100%;
+    margin: 25px auto;
+    padding: 18px;
+    background: white;
+    border: 2px dashed #80b991;
+    border-radius: 12px;
+}
+
+#preview {
+    display: none;
+    width: 260px;
+    max-width: 100%;
+    max-height: 260px;
+    object-fit: contain;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.1);
+}
+
+#detectButton {
+    background: #21834a;
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#detectButton:hover {
+    background: #145c31;
+}
+
+#detectButton:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* AI RESULT CARD */
+
+#result {
+    max-width: 750px;
+    margin: 35px auto 0;
+    padding: 30px;
+    background: white;
+    border-radius: 16px;
+    text-align: left;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.07);
+    overflow-wrap: anywhere;
+}
+
+#result h2 {
+    color: #21834a;
+    font-size: 24px;
+    margin: 12px 0;
+}
+
+#result h3 {
+    color: #174d2b;
+    font-size: 17px;
+    margin-top: 22px;
+}
+
+#result p {
+    margin: 10px 0;
+    color: #53685a;
+}
+
+#result ol {
+    padding-left: 25px;
+    margin-top: 10px;
+}
+
+#result li {
+    padding: 5px 0;
+    color: #53685a;
+}
+
+/* CONTACT */
+
+.contact {
+    background: white;
+}
+
+/* FOOTER */
+
+footer {
+    background: #174d2b;
+    color: white;
+    text-align: center;
+    padding: 22px;
+}
+
+footer p {
+    color: white;
+}
+
+/* MOBILE RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 12px;
+        padding: 15px;
+    }
+
+    nav {
+        gap: 14px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .hero {
+        min-height: 430px;
+        padding: 75px 7%;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .about,
+    .detection,
+    .contact {
+        padding: 55px 7%;
+    }
+
+    #result {
+        padding: 20px;
+    }
+}
